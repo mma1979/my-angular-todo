@@ -1,0 +1,7 @@
+<li [style]="{'background': item.isComplete? 'lightgreen' : '#f5f5f5'}">
+    <span [class.done]="item.isComplete">{{item.description}}</span>
+    <div>
+        <button class="btn btn-success" type="button" (click)="item.isComplete = !item.isComplete">Done</button>
+        <button class="btn btn-danger" type="button" (click)="removeItem()">Delete</button>
+    </div>
+</li>

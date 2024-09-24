@@ -1,0 +1,7 @@
+<ul id="task-list">
+    <!-- <app-list-item [item]="item" *ngFor="let item of list"></app-list-item> -->
+
+    @for(item of list; track item.id){
+        <app-list-item [item]="item" (onItemRemove)="removeItem($event)"></app-list-item>
+    }
+</ul>
